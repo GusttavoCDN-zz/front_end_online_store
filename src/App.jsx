@@ -10,10 +10,14 @@ class App extends Component {
     return (
       <BrowserRouter basename="process.env.PUBLIC_URL">
         <Switch>
-          <Route exact path="/cart" component={ Cart } />
-          <Route exact path="/checkout" component={ Checkout } />
-          <Route exact path="/product/:id" component={ ProductDetails } />
-          <Route exact path="/" component={ Home } />
+          <Route exact path="/front_end_online_store/cart" component={ Cart } />
+          <Route exact path="/front_end_online_store/checkout" component={ Checkout } />
+          <Route
+            exact
+            path="/front_end_online_store/product/:id"
+            component={ ProductDetails }
+          />
+          <Route exact path="/front_end_online_store/" component={ Home } />
         </Switch>
       </BrowserRouter>
     );
