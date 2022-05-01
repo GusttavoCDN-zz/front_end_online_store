@@ -8,7 +8,7 @@ import Checkout from './pages/Checkout';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter basename="process.env.PUBLIC_URL">
+      <BrowserRouter>
         <Switch>
           <Route exact path="/front_end_online_store/cart" component={ Cart } />
           <Route exact path="/front_end_online_store/checkout" component={ Checkout } />
