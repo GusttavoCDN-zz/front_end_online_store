@@ -61,11 +61,11 @@ class Cart extends Component {
     return (
       <section className="cart_page">
         <header className="cart_header">
-          <Link to="/cart">
+          <Link to="/front_end_online_store/cart">
             <CartSVG className="btn_cart " />
           </Link>
           <span className="total_cart">{totalProducts}</span>
-          <Link to="/" className="link_home">
+          <Link to="/front_end_online_store/" className="link_home">
             <HomeSVG className="cart_img_products_details" />
           </Link>
         </header>

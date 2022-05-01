@@ -9,7 +9,7 @@ class Product extends Component {
 
     return (
       <Link
-        to={ `/product/${id}` }
+        to={ `/front_end_online_store/product/${id}` }
         className="product_detail_link"
         data-testid="product-detail-link"
       >

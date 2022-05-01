@@ -92,10 +92,10 @@ class ProductDetails extends Component {
     return (
       <section className="product_details_page">
         <header>
-          <Link to="/" className="link_home">
+          <Link to="/front_end_online_store/" className="link_home">
             <HomeSVG className="cart_img_products_details" />
           </Link>
-          <Link to="/cart" data-testid="shopping-cart-button" className="link_cart">
+          <Link to="/front_end_online_store/cart" data-testid="shopping-cart-button" className="link_cart">
             <CartSVG className="cart_img_products_details" />
             <span data-testid="shopping-cart-size" className="total_cart_details">
               {totalProducts}
