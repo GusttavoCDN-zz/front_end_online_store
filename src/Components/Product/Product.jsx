@@ -19,12 +19,13 @@ class Product extends Component {
   };
 
   addProductToCart = () => {
-    const { id, title, price, thumbnail, updateScreen } = this.props;
+    const { id, title, price, thumbnail, updateScreen, availableQuantity } = this.props;
     const productObj = {
       id,
       title,
       price,
       thumbnail,
+      availableQuantity,
     };
     saveProductToCart(productObj);
     updateScreen();
@@ -57,6 +58,7 @@ Product.propTypes = {
   price: PropTypes.number.isRequired,
   id: PropTypes.string,
   updateScreen: PropTypes.func.isRequired,
+  availableQuantity: PropTypes.number.isRequired,
 };
 
 Product.defaultProps = {

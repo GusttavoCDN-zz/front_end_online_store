@@ -9,9 +9,10 @@ describe(`14 - Limite a quantidade de produtos adicionados ao carrinho pela quan
       estoque`, async () => {
 
     jest.spyOn(global, 'fetch').mockImplementation(mockFetch)
-    render(<App />);
+    const { debug } =  render(<App />);
     await waitFor(() => expect(global.fetch).toHaveBeenCalled());
     fireEvent.click(screen.getAllByTestId('category')[0]);
+    debug();
     await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(2));
     fireEvent.click(screen.getAllByTestId('product-add-to-cart')[1]);
     fireEvent.click(screen.getByTestId('shopping-cart-button'));

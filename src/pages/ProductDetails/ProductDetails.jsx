@@ -88,14 +88,25 @@ class ProductDetails extends Component {
     );
 
     if (!product) return null;
-    const { id, thumbnail, title, price, attributes } = product;
+    const {
+      id,
+      thumbnail,
+      title,
+      price,
+      attributes,
+      available_quantity: availableQuantity,
+    } = product;
     return (
       <section className="product_details_page">
         <header>
           <Link to="/front_end_online_store/" className="link_home">
             <HomeSVG className="cart_img_products_details" />
           </Link>
-          <Link to="/front_end_online_store/cart" data-testid="shopping-cart-button" className="link_cart">
+          <Link
+            to="/front_end_online_store/cart"
+            data-testid="shopping-cart-button"
+            className="link_cart"
+          >
             <CartSVG className="cart_img_products_details" />
             <span data-testid="shopping-cart-size" className="total_cart_details">
               {totalProducts}
@@ -118,6 +129,7 @@ class ProductDetails extends Component {
             productRatings={ productRatings }
             isRatingButtonEnabled={ isRatingButtonEnabled }
             updateScreen={ this.updateScreen }
+            availableQuantity={ availableQuantity }
           />
         )}
       </section>

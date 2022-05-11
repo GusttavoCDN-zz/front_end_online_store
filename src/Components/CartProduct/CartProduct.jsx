@@ -12,9 +12,13 @@ class CartProduct extends Component {
   }
 
   increaseQuantity = () => {
+    const { availableQuantity } = this.props;
+    const { quantity } = this.state;
+    if (quantity >= availableQuantity) return;
+
     this.setState(
-      ({ quantity }) => ({
-        quantity: quantity + 1,
+      (prevState) => ({
+        quantity: prevState.quantity + 1,
       }),
       () => this.updateScreen(),
     );
@@ -97,6 +101,7 @@ CartProduct.propTypes = {
   quantity: PropTypes.number.isRequired,
   id: PropTypes.string.isRequired,
   updateCart: PropTypes.func.isRequired,
+  availableQuantity: PropTypes.number.isRequired,
 };
 
 export default CartProduct;

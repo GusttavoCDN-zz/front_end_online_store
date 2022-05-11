@@ -64,16 +64,19 @@ class Home extends Component {
   renderProducts = () => {
     const { products } = this.state;
 
-    return products.map(({ id, thumbnail, title, price }) => (
-      <Product
-        key={ id }
-        id={ id }
-        thumbnail={ thumbnail }
-        title={ title }
-        price={ price }
-        updateScreen={ this.updateScreen }
-      />
-    ));
+    return products.map(
+      ({ id, thumbnail, title, price, available_quantity: availableQuantity }) => (
+        <Product
+          key={ id }
+          id={ id }
+          thumbnail={ thumbnail }
+          title={ title }
+          price={ price }
+          updateScreen={ this.updateScreen }
+          availableQuantity={ availableQuantity }
+        />
+      ),
+    );
   };
 
   updateScreen = () => {
@@ -107,7 +110,11 @@ class Home extends Component {
             >
               Pesquisar
             </button>
-            <Link to="/front_end_online_store/cart" data-testid="shopping-cart-button" className="link_cart">
+            <Link
+              to="/front_end_online_store/cart"
+              data-testid="shopping-cart-button"
+              className="link_cart"
+            >
               <CartSVG className="cart_img" />
             </Link>
             <span data-testid="shopping-cart-size" className="total_cart">

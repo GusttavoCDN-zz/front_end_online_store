@@ -27,17 +27,20 @@ class Cart extends Component {
 
     return (
       <section className="cart_products_section">
-        {cartProducts.map(({ id, title, price, quantity, thumbnail }) => (
-          <CartProduct
-            key={ id }
-            id={ id }
-            title={ title }
-            price={ price }
-            quantity={ quantity }
-            thumbnail={ thumbnail }
-            updateCart={ this.updateCart }
-          />
-        ))}
+        {cartProducts.map(
+          ({ id, title, price, quantity, thumbnail, availableQuantity }) => (
+            <CartProduct
+              key={ id }
+              id={ id }
+              title={ title }
+              price={ price }
+              quantity={ quantity }
+              thumbnail={ thumbnail }
+              updateCart={ this.updateCart }
+              availableQuantity={ availableQuantity }
+            />
+          ),
+        )}
       </section>
     );
   };
