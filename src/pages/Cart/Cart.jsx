@@ -79,7 +79,7 @@ class Cart extends Component {
               {`R$${total.toFixed(2)}`}
             </p>
             <Link
-              to="/checkout"
+              to="/front_end_online_store/checkout"
               data-testid="checkout-products"
               className="link_checkout"
             >

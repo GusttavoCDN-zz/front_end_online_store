@@ -107,7 +107,7 @@ class Home extends Component {
             >
               Pesquisar
             </button>
-            <Link to="/cart" data-testid="shopping-cart-button" className="link_cart">
+            <Link to="/front_end_online_store/cart" data-testid="shopping-cart-button" className="link_cart">
               <CartSVG className="cart_img" />
             </Link>
             <span data-testid="shopping-cart-size" className="total_cart">
